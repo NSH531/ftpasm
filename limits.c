@@ -114,3 +114,28 @@ if (__builtin_expect(ax == 0, 0))
 *(unsigned char*)(gs:bx+di+0x70) &= al;
 __asm__("popa");
 __asm__("arpl %bp, (%bx, %si, 0x65)");
+*(unsigned char*)(si + 0x69) &= cl;
+__arpl(di + 0x6e, sp);
+if (!eflags.carry) goto label_1;
+*(unsigned char*)(bp + 0x32) &= dh;
+*(unsigned char*)(cs * 16 + bx + si) ^= ah;
+if (cf == 0 && zf == 0) goto label_2;
+*(unsigned char*)(si + 0x4c) &= cl;
+push(si);
+bp--;
+*(unsigned char*)(di + 0x78) &= al;
+__arpl(di + 0x70, sp);
+if (zf == 0) goto label_3;
+outsw();
+outsb();
+if (!eflags.carry) goto label_4;
+*(unsigned char*)(bx) |= ch;
+__das__();
+label_1:
+// ...
+label_2:
+// ...
+label_3:
+// ...
+label_4:
+// ...
