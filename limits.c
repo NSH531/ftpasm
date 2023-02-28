@@ -90,3 +90,27 @@ if (ax == 0x3d3d) {
 
 
 // The final SUB and CMP instructions are repeated from the beginning of the code and are not shown here.
+ch |= *(unsigned char*)bx;
+__asm__("das");
+ch |= *(unsigned char*)bx;
+__asm__("das");
+*(unsigned char*)(bx+si+0x61) &= dl;
+if (__builtin_expect(eflags & (1 << 0), 0))
+    goto label_0xde;
+*(unsigned char*)(bx+0x66) &= ch;
+*(unsigned char*)(si+0x68) &= dh;
+*(unsigned char*)(gs:si+0x4c) &= cl;
+__asm__("push %si");
+--bp;
+*(unsigned char*)(bx+si+0x72) &= dl;
+__asm__("outsw");
+__asm__("push $0x65");
+__asm__("arpl %si, (%si, %cx)");
+*(unsigned char*)(di+0x6e) &= dh;
+if (__builtin_expect(eflags & (1 << 6), 0))
+    goto label_0xa6;
+if (__builtin_expect(ax == 0, 0))
+    goto label_0xf0;
+*(unsigned char*)(gs:bx+di+0x70) &= al;
+__asm__("popa");
+__asm__("arpl %bp, (%bx, %si, 0x65)");
