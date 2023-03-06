@@ -22,7 +22,9 @@ Distributed disassembly has numerous potential applications in the field of soft
 ## Conclusion
 Distributed disassembly is a powerful technique for breaking down large, complex software systems into smaller, more manageable pieces for analysis. By distributing the workload across multiple machines, the efficiency and speed of the disassembly process can be greatly improved, while also mitigating the risks associated with analyzing code on a single machine. While there are challenges associated with coordinating the analysis across multiple machines, a range of tools and frameworks have been developed to support distributed disassembly, making it an increasingly popular technique for software analysis and reverse engineering.
 
-##References
+##  References
+
+
 Jacob Henkel, Nathan Manohar Kanduru, Xunchao Hu, and Yier Jin. "Scalable and Transparent Distributed Binary Analysis." IEEE Transactions on Dependable and Secure Computing, vol. 17, no. 3, pp. 576-589, May-June 2020, doi: 10.1109/TDSC.2018.2807083.
 
 Guanhua Wang, Yizheng Chen, Sencun Zhu, and Peng Liu. "Distributed Binary Code Analysis with MapReduce." Proceedings of the 18th ACM Conference on Computer and Communications Security, pp. 53-64, October 2011, doi: 10.1145/2046707.2046715.
